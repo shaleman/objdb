@@ -257,7 +257,7 @@ func (lk *consulLock) createSession() error {
 	// session configuration
 	sessCfg := api.SessionEntry{
 		Name:      lk.keyName,
-		Behavior:  "release",
+		Behavior:  "delete",
 		LockDelay: 10 * time.Millisecond,
 		TTL:       lk.ttl,
 	}
